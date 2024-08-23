@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerência Bets</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Tela de Login -->
+    <div id="login-container">
+        <h2>Login</h2>
+        <form id="login-form">
+            <input type="text" id="username" placeholder="Usuário" required>
+            <input type="password" id="password" placeholder="Senha" required>
+            <button type="submit">Entrar</button>
+        </form>
+    </div>
+
+    <!-- Tela de Menu -->
+    <div id="menu-container" class="hidden">
+        <h2>Menu Principal</h2>
+        <div id="menu-buttons">
+            <button id="register-bet">Registrar Bet</button>
+            <button id="history-bet">Histórico de Bets</button>
+            <button id="leverage-projects">Projetos de Alavancagem</button>
+        </div>
+        <button id="logout-button-menu">Logout</button> <!-- Botão de Logout no Menu -->
+    </div>
+
+    <!-- Formulário de Registrar Bet -->
+    <div id="register-bet-form" class="hidden">
+        <h2>Registrar Bet</h2>
+        <form id="bet-form">
+            <label for="liga">Liga:</label>
+            <input type="text" id="liga" name="liga" required>
+            
+            <label for="partida">Partida:</label>
+            <input type="text" id="partida" name="partida" required>
+            
+            <label for="tipoEntrada">Tipo de Entrada:</label>
+            <input type="text" id="tipoEntrada" name="tipoEntrada" required>
+            
+            <label for="valor">Valor:</label>
+            <input type="number" id="valor" name="valor" step="0.01" required>
+            
+            <label for="status">Status:</label>
+            <select id="status" name="status" required>
+                <option value="ganha">Ganha</option>
+                <option value="perdida">Perdida</option>
+                <option value="pendente">Pendente</option>
+            </select>
+            
+            <div id="form-buttons">
+                 <button type="submit">Salvar</button>
+                 <button type="reset">Limpar</button>
+                 <button type="button" id="back-button">Voltar</button>
+            </div>
+                 
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
